@@ -1,0 +1,30 @@
+package interview;
+import java.util.HashSet;
+
+
+public class Pangram {
+	public static boolean isPangram(String str) {
+		str = str.toLowerCase();
+		
+		HashSet<Character> letterSet = new HashSet<>();
+		for (char c: str.toCharArray()) {
+			if(Character.isLetter(c)) {
+				letterSet.add(c);
+			}
+		}
+		return letterSet.size() == 26;
+	}
+
+	public static void main(String[] args) {
+		
+		String input = "The five boxing wizards jump quickly."
+		if (isPangram(input)) {
+			System.out.println("It is a Pangram");
+		}else {
+			System.out.println("It is not a Pangram");
+		}
+		
+
+	}
+
+}
