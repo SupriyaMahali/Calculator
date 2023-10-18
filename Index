@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        form {
+            background-color: aliceblue;
+            height: auto;
+            width: 500px;
+            align-content: center;
+            align-self: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .centered-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+        .submit{
+            background-color: aqua;
+        }
+        .reset{
+            background-color: #ce1b1b;
+        }
+    </style>
+</head>
+<body bgcolor="skyblue">
+    <h1>Customer Survey Form</h1>
+    <div class="centered-form">
+    <form onsubmit="return validateForm()">
+    <fieldset>
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="First Name" size="15" pattern="[A-Za-z ]+" title="Name should contain only alphabets" required>
+            <label for="name">Last Name:</label>
+            <input type="text" id="name" name="Last Name" size="15" pattern="[A-Za-z ]+" title="Name should contain only alphabets" required><br> <br>
+            <label for="name">Phone Number:</label>
+            <input type="text" id="name" name="Phone Number" size="15" pattern="[0-9]+" title="Name should contain only numbers" required><br> <br><br>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" required><br><br>
+            <label for="name">Gender:</label>
+            <input type="radio" id="suggest-yes" name="suggest" value="Male" required><label for="suggest-Male">Male</label>
+            <input type="radio" id="suggest-no" name="suggest" value="Female" required><label for="suggest-Female">Female</label><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" size="15" required><br><br>
+            <label for="country">Country</label><span style="color: red !important; display: inline; float: none;">*</span>      
+        
+            <select id="country" name="country"class="validateForm">
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Åland Islands">Åland Islands</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+                <option value="American Samoa">American Samoa</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Angola">Angola</option>
+                <option value="Anguilla">Anguilla</option>
+                <option value="Antarctica">Antarctica</option>
+                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Armenia">Armenia</option>
+                <option value="Aruba">Aruba</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Bahamas">Bahamas</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Barbados">Barbados</option>
+                <option value="Belarus">Belarus</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Belize">Belize</option>
+                <option value="Benin">Benin</option>
+                <option value="Bermuda">Bermuda</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                <option value="Botswana">Botswana</option>
+                <option value="Bouvet Island">Bouvet Island</option>
+                <option value="Brazil">Brazil</option>
+                <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                <option value="Brunei Darussalam">Brunei Darussalam</option>
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Burundi">Burundi</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Cameroon">Cameroon</option>
+                <option value="Canada">Canada</option>
+                <option value="Cape Verde">Cape Verde</option>
+                 <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Isle of Man">Isle of Man</option>
+                <option value="Israel">Israel</option>
+                <option value="Italy">Italy</option>
+                <option value="Jamaica">Jamaica</option>
+                <option value="Martinique">Martinique</option>
+                <option value="Mauritania">Mauritania</option>
+                <option value="Mauritius">Mauritius</option>
+                <option value="Mayotte">Mayotte</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                <option value="Virgin Islands, British">Virgin Islands, British</option>
+                <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                <option value="Wallis and Futuna">Wallis and Futuna</option>
+                <option value="Western Sahara">Western Sahara</option>
+                <option value="Yemen">Yemen</option>
+                <option value="Zambia">Zambia</option>
+                <option value="Zimbabwe">Zimbabwe</option>
+            </select>
+            <p>Is this the first time you are using our products and services?</p>
+            <input type="radio" id="yes" name="first_time" value="Yes" required><label for="yes">Yes</label>
+            <input type="radio" id="no" name="first_time" value="No" required><label for="no">No</label><br>
+            <p>Would you like to suggest to your friends and colleagues?</p>
+            <input type="radio" id="suggest-yes" name="suggest" value="Yes" required><label for="suggest-yes">Yes</label>
+            <input type="radio" id="suggest-no" name="suggest" value="No" required><label for="suggest-no">No</label><br>
+            <p>How satisfied are you with our Company Overall</p>
+            <input type="radio" id="satisfied" name="satisfaction" value="Satisfied" required><label for="satisfied">Satisfied</label>
+            <input type="radio" id="unsatisfied" name="satisfaction" value="Unsatisfied" required><label for="unsatisfied">Unsatisfied</label>
+            <input type="radio" id="undecided" name="satisfaction" value="Undecided" required><label for="undecided">Undecided</label><br><br>
+            <label for="suggestion">Do you have any suggestions to improve our service?</label><br><br>
+            <textarea id="suggestion" name="suggestion" cols="30" rows="5" required></textarea><br><br>
+            <input type="submit" value="Submit" style="background-color: aqua;" >
+            <input type="reset" value="Reset" style="background-color: #ce1b1b;">
+        </fieldset>
+    </form>
+    </div>
+    <h2 style="text-align: center;">Thank you...</h2>
+
+    <script>
+        function validateForm() {
+            // Add custom validation logic here if needed
+            return true; // Return true to allow the form submission, or return false to prevent submission.
+        }
+    </script>
+</body>
+</html>
