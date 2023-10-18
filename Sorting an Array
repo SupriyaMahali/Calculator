@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1{
+            color:darkmagenta
+        }
+    </style>
+    <title>Descending Sort Example</title>
+</head>
+<body>
+
+<h1>Sorting an Array in Descending Order</h1>
+
+<p><b>Original Array</b></p>
+    
+<div id="original-array"></div>
+
+<p><b>Sorted Array</b></p>
+<div id="sorted-array"></div>
+
+<script>
+    // Array to sort in descending order
+    let numbers = [12,21,33,25,40,50,70];
+
+    // Display the original array
+    document.getElementById("original-array").innerHTML = numbers.join(', ');
+
+    // Using the sort() method with a comparison function for descending numerical sorting
+    let sortedNumbers = numbers.slice().sort((a, b) => b - a);
+
+    // Display the sorted array in descending order
+    document.getElementById("sorted-array").innerHTML = sortedNumbers.join(', ');
+</script>
+
+</body>
+</html>
